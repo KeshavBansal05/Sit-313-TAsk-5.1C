@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './OptionsSelector.css';
 
 const OptionsSelector = ({ onSelect }) => {
-  const [selectedOption, setSelectedOption] = useState('optionA');
+  const [selectedOption, setSelectedOption] = useState('question');
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -14,17 +14,17 @@ const OptionsSelector = ({ onSelect }) => {
       <p>Select an option: 
         <span className='Options'>
           <span
-            className={`Option  ${selectedOption === 'optionA' ? 'selected' : ''}`}
+            className={`Option  ${selectedOption === 'question' ? 'selected' : ''}`}
             onClick={() => handleOptionClick('optionA')}
           >
-            {selectedOption === 'optionA' && <span className='SelectedIndicator'>&#9679;</span>}
+            {selectedOption === 'question' && <span className='SelectedIndicator'>&#9679;</span>}
             Question
           </span>
           <span
-            className={`Option ${selectedOption === 'optionB' ? 'selected' : ''}`}
+            className={`Option ${selectedOption === 'article' ? 'selected' : ''}`}
             onClick={() => handleOptionClick('optionB')}
           >
-            {selectedOption === 'optionB' && <span className='SelectedIndicator'>&#9679;</span>}
+            {selectedOption === 'article' && <span className='SelectedIndicator'>&#9679;</span>}
             Article
           </span>
         </span>
